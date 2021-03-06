@@ -1,6 +1,6 @@
 import React, {useEffect, useReducer, useState} from 'react';
 import styled from 'styled-components';
-import Modal from '../../molecules/modal/Modal';
+import Modal from '../modal/Modal';
 import {Link, Route, Switch} from 'react-router-dom';
 
 const Wrapper = styled.div`
@@ -33,14 +33,14 @@ const Title = styled.div.attrs({
 const Photos = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-  grid-gap: 40px;
+  grid-gap: 20px;
 `
 
 const Img = styled.img`
   width: 100%;
-  height: 400px;
+  height: 300px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 2px;
 `
 
 export const GalleryContext = React.createContext()
@@ -101,10 +101,8 @@ const Gallery = () => {
                 <section>
                     <Title>
                         <h3>jakis Tytuł</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, iusto mollitia omnis
-                            perferendis possimus ullam? Cumque deleniti, doloribus, earum eius est hic minima numquam
-                            placeat
-                            tempora, tempore vero voluptate voluptates!
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, iusto mollitia omnis
                         </p>
                     </Title>
 

@@ -1,8 +1,13 @@
 import React, {useCallback, useContext, useEffect, useRef} from 'react';
-import styled, {css} from 'styled-components';
+import styled, {css, keyframes} from 'styled-components';
 import {useHistory, useParams} from 'react-router';
 import {useClickOutside} from '../../hooks/clickOutside';
-import {GalleryContext} from '../../organisms/gallery/Gallery';
+import {GalleryContext} from '../gallery/Gallery';
+
+const slide = keyframes`
+  0% { transform: translate(-50%, -50%) scaleX(0) }
+  100% { transform: translate(-50%, -50%) scaleX(1)}
+`
 
 const Wrapper = styled.div`
   position: fixed;
@@ -24,6 +29,8 @@ const Wrapper = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    animation: ${slide} .3s linear;
+    transform-origin: left;
   }
 `;
 
@@ -32,16 +39,11 @@ const Button = styled.button`
     left: 10px;
     top: 50%;
     transform: translateY(-50%);
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    border: none;
-    background-color: transparent;
     transition: .3s;
+    border: none;
     
-    :hover {
-      background-color: black;
-      color: white;
+    span {
+      font-size: 30px;
     }
     
     ${({second}) => (
@@ -84,8 +86,8 @@ const Modal = () => {
         <Wrapper>
             <div ref={ref}>
                 <Img src={decodeURIComponent(id)} alt="obrazek"/>
-                <Button onClick={handlePrev}>prev</Button>
-                <Button second  onClick={handlePost}>next</Button>
+                <Button onClick={handlePrev}><span className="fa fa-arrow-circle-left"></span></Button>
+                <Button second  onClick={handlePost}><span className="fa fa-arrow-circle-right"></span></Button>
             </div>
         </Wrapper>
     );

@@ -22,19 +22,22 @@ const Wrapper = styled.div`
     margin: 60px 0 40px;
     width: 40%;
   }
+  
+  @media (max-width: 425px) {
+    width: 100%;
+    height: calc(50vh - 80px);
+  } 
 `;
 
 const Main = () => {
-  return (
-    <>
-      <Wrapper>
-        <Photos/>
-        <h1>Uprawa cebuli</h1>
-        <p>jakis tekst: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-          <Button>cos rob</Button>
-      </Wrapper>
-    </>
-  )
+    return (
+        <Wrapper>
+            <Photos/>
+            <h1>Uprawa cebuli</h1>
+            <p>jakis tekst: Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <Button>cos rob</Button>
+        </Wrapper>
+    )
 }
 
 export default Main

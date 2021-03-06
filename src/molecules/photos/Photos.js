@@ -27,12 +27,12 @@ const Img = styled.img`
 `
 
 const Photos = () => {
-  const [pictures, setPictures] = useState([
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmE-HeU_vyb32pVuqCO61BXWrS3nFoOdduPw&usqp=CAU',
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjQmZ50Ef8dHlrDll3nSWrmP_nAjfwViRFBg&usqp=CAU',
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKdYiystTWuXpDlF3DXjTDW2bGRvULtBNZPA&usqp=CAU',
-  ])
-  const [source, setSource] = useState(0)
+    const [pictures, setPictures] = useState([
+        'https://pixabay.com/get/ga62f9302fed4f0c3675f0a9e9f1b5c3a85ca6b70b5c87508b3c5217010eb756b052ff0966c639762da82c0f9f4dd9a74_1920.jpg',
+        'https://pixabay.com/get/gbf4c8e3b72aca6066a0e5277a2ebf5af071c5c4d7b3fb0becf1f2aa4de74a00867bc7052680dbdd43d3b2e8f1ca1da6a_1920.jpg',
+        'https://pixabay.com/get/g4a027b2ee10b223240832a8cb761fd3328358b081832ff95352be639a9e1738454efe42e7945031d4a88695d39101f31_1920.jpg',
+    ])
+    const [source, setSource] = useState(0)
 
   const onAnimationEnd = () => {
     if (source === pictures.length - 1) {

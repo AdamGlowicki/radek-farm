@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   padding-top: 40px;
-  width: calc(40% + 65px);
+  width: calc(45% + 65px);
   height: calc(100vh - 85px);
   padding-left: 0;
   display: flex;
@@ -15,7 +15,7 @@ const Wrapper = styled.div`
     top: 0;
     right: 0;
     height: 100vh;
-    width: 60%;
+    width: 55%;
     object-fit: cover;
   }
 `;
@@ -27,15 +27,14 @@ const Content = styled.aside`
 
 const Title = styled.div`
   display: flex;
-  padding: 30px 65px;
-  line-height: 1;
+  padding: 50px 65px;
   flex-direction: column;
   align-items: flex-start;
   border-bottom: 4px solid black;
  
   h3 {
     margin-bottom: 10px;
-    font-size: 40px;
+    font-size: 52px;
     font-weight: 700;
   }
   

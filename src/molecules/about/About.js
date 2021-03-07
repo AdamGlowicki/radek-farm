@@ -58,8 +58,7 @@ const Paragraph = styled(Title)`
 const About = () => {
     return (
         <Wrapper>
-            <img src="https://pixabay.com/get/g47da8b73cc2ef4c3fc112a5d8b3b4ff15f5544dd9dba29cc51b8f8b47ff6878da2249176571b9eaaf36992f9e0f1d44e_1920.jpg" alt=""/>
-
+            <img src='https://picsum.photos/400/400' alt=""/>
             <Content>
                 <Title
                     area='one'
